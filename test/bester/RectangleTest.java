@@ -2,6 +2,9 @@ package bester;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static junit.framework.Assert.assertEquals;
 
 public class RectangleTest {
@@ -10,5 +13,13 @@ public class RectangleTest {
         assertEquals(6.0, new Rectangle(2, 3).area());
         assertEquals(0.0, new Rectangle(0, 1).area());
         assertEquals(3.75, new Rectangle(1.5, 2.5).area());
+    }
+
+    @Test
+    public void shouldReturnTheBetterRectangle() throws Exception {
+        ArrayList<Rectangle> list = new ArrayList<Rectangle>();
+        list.add(new Rectangle(2,3));
+        list.add(new Rectangle(0,1));
+        list.add(new Rectangle(1.5,2.5));
     }
 }

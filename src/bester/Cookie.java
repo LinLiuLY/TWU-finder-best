@@ -1,6 +1,8 @@
 package bester;
 
-public class Cookie {
+import java.util.ArrayList;
+
+public class Cookie implements betterFinder{
 
     private int numberOfChocolateChips;
 
@@ -8,4 +10,8 @@ public class Cookie {
         this.numberOfChocolateChips = numberOfChocolateChips;
     }
 
+    @Override
+    public Object betterFinder(ArrayList<Object> list) {
+        return null;
+    }
 }
