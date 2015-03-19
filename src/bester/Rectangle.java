@@ -2,7 +2,7 @@ package bester;
 
 import java.util.ArrayList;
 
-public class Rectangle implements betterFinder{
+public class Rectangle implements betterFinder {
     private double length;
     private double breadth;
 
@@ -17,10 +17,10 @@ public class Rectangle implements betterFinder{
 
     @Override
     public Object betterFinder(ArrayList<Object> list) {
-        Rectangle bestRectangle = new Rectangle(0,0);
-        for(Object object : list) {
+        Rectangle bestRectangle = new Rectangle(0, 0);
+        for (Object object : list) {
             Rectangle rectangle = (Rectangle) object;
-            if (rectangle.area() > bestRectangle.area()){
+            if (rectangle.area() > bestRectangle.area()) {
                 bestRectangle = rectangle;
             }
         }

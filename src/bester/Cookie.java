@@ -2,7 +2,7 @@ package bester;
 
 import java.util.ArrayList;
 
-public class Cookie implements betterFinder{
+public class Cookie implements betterFinder {
 
     private int numberOfChocolateChips;
 
@@ -10,8 +10,20 @@ public class Cookie implements betterFinder{
         this.numberOfChocolateChips = numberOfChocolateChips;
     }
 
+    public int getNumberOfChocolateChips() {
+        return numberOfChocolateChips;
+    }
+
     @Override
     public Object betterFinder(ArrayList<Object> list) {
-        return null;
+        Cookie bestCookie = new Cookie(0);
+        for (Object object : list) {
+            Cookie Cookie = (Cookie) object;
+            if (Cookie.getNumberOfChocolateChips() > bestCookie.getNumberOfChocolateChips()) {
+                bestCookie = Cookie;
+            }
+        }
+        return bestCookie;
+
     }
 }
